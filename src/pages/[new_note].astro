@@ -1,0 +1,24 @@
+---
+import CreateDraft from "../container/CreateDraft.astro";
+import Layout from "../layouts/Layout.astro";
+
+
+export async function getStaticPaths() {
+    return [
+        {
+            params: { new_note: 'new'}
+        }
+    ]
+}
+
+const { new_note } = Astro.params;
+console.log('notes', new_note)
+---
+
+<Layout title="Create your Note">
+    <main>
+        <section>
+            <CreateDraft />
+        </section>
+    </main>
+</Layout>
