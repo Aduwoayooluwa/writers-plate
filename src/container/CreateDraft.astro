@@ -1,12 +1,13 @@
 ---
 import InputField from "../components/InputField.astro";
 import TextArea from "../components/TextArea.astro";
+import ArticleEditor from "../reactComponents/Notes";
 
 ---
 
 
 <main>
     <InputField />
-    <TextArea />
+    <ArticleEditor client:load />
     
 </main>
