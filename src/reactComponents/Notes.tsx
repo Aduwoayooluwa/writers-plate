@@ -17,31 +17,31 @@ setEditorValue(editor.innerHTML);
 }
 
 return (
-<div>
+<div className="w-full grid place-items-center">
     <div className="my-4">
     <button
         className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-600"
         onClick={() => addFormatting("b")}
     >
-        Bold
+        B
     </button>
     <button
         className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-600"
-        onClick={() => addFormatting("p")}
+        onClick={() => addFormatting("span")}
     >
-        Normal
+        N
     </button>
     <button
         className="px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-600"
         onClick={() => addFormatting("u")}
     >
-        Underline
+        U
     </button>
     <button
         className="px-4 py-2 font-bold text-white bg-yellow-500 rounded hover:bg-yellow-600"
         onClick={() => addFormatting("i")}
     >
-        Italic
+        I
     </button>
     </div>
 
@@ -50,7 +50,7 @@ return (
     contentEditable="true"
     dangerouslySetInnerHTML={{ __html: editorValue }}
     onInput={(e) => setEditorValue(e.currentTarget.innerHTML)}
-    className="w-full h-[500px] p-4 text-lg font-sans outline-none focus:border border-purple-500 rounded-md"
+    className="w-full md:w-[800px] bg-white h-[500px] p-4 text-lg font-sans outline-none focus:border border-purple-500 rounded-md"
     ></div>
 </div>
 );
